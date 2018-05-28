@@ -10,9 +10,11 @@ public class Jokes {
 
     public Jokes() {
         jokes = new ArrayList<>();
-        jokes.add("a");
-        jokes.add("b");
-        jokes.add("c");
+        jokes.add("Q. How did the programmer die in the shower?\n" +
+                "A. He read the shampoo bottle instructions: Lather. Rinse. Repeat.");
+        jokes.add("CAPS LOCK: Preventing Login Since 1980");
+        jokes.add("Q: How do you explain the movie Inception to a programmer?\n" +
+                "A: Basically, when you run a VM inside another VM, inside another VM, inside another VM, everything runs real slow!");
     }
 
     public String getJoke() {
