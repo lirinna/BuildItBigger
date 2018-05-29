@@ -11,6 +11,8 @@ import android.widget.Toast;
 import com.example.jokesandroidlib.JokesActivity;
 import com.example.jokeslib.Jokes;
 
+import static java.security.AccessController.getContext;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,13 +51,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        jokes = new Jokes();
+
+        new EndpointsAsyncTask(this).execute();
+
+       /*  jokes = new Jokes();
         joke = jokes.getJoke();
         Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(getApplicationContext(), JokesActivity.class);
+       Intent intent = new Intent(getApplicationContext(), JokesActivity.class);
         intent.putExtra("joke", joke);
-        getApplication().startActivity(intent);
+        getApplication().startActivity(intent); */
     }
 
 
