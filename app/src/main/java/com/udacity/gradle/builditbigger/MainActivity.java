@@ -1,18 +1,16 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Intent;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
+
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
-import com.example.jokesandroidlib.JokesActivity;
 import com.example.jokeslib.Jokes;
-
-import static java.security.AccessController.getContext;
-
+import com.udacity.gradle.builditbigger.free.MainActivityFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,8 +23,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    }
+        if (BuildConfig.FLAVOR.equals("free")) {
+            setTitle("Free Version");
 
+        } else {
+            setTitle("Paid Version");
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,19 +51,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void tellJoke(View view) {
-
-        new EndpointsAsyncTask(this).execute();
-
-       /*  jokes = new Jokes();
-        joke = jokes.getJoke();
-        Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
-
-        Intent intent = new Intent(getApplicationContext(), JokesActivity.class);
-        intent.putExtra("joke", joke);
-        getApplication().startActivity(intent); */
     }
 
 
