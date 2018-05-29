@@ -80,26 +80,6 @@ server. In order to do that you will have to install the Cloud SDK:
 
 https://cloud.google.com/sdk/docs/
 
-Once installed, you will need to follow the instructions in the Setup Cloud SDK
-section at:
-
-https://cloud.google.com/endpoints/docs/frameworks/java/migrating-android
-
-Note: You do not need to follow the rest of steps in the migration guide, only
-the Setup Cloud SDK.
-
-Start or stop your local server by using the gradle tasks as shown in the following
-screenshot:
-
-<img src="/FinalProject/GCE-server-gradle-tasks.png" height="500">
-
-Once your local GCE server is started you should see the following at 
-[localhost:8080](http://localhost:8080)
-
-<img src="https://raw.githubusercontent.com/GoogleCloudPlatform/gradle-appengine-templates/77e9910911d5412e5efede5fa681ec105a0f02ad/doc/img/devappserver-endpoints.png">
-
-Now you are ready to continue! 
-
 Introduce a project dependency between your Java library 
 and your GCE module, and modify the GCE starter code to pull jokes from your Java library. 
 Create an AsyncTask to retrieve jokes using the template included int these 
