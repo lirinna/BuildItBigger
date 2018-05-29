@@ -1,22 +1,16 @@
 package com.udacity.gradle.builditbigger;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.example.jokeslib.Jokes;
-import com.udacity.gradle.builditbigger.free.MainActivityFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    private Jokes jokes;
-    String joke;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

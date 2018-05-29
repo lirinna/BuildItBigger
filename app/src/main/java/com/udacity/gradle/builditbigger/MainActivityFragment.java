@@ -40,7 +40,7 @@ public class MainActivityFragment extends Fragment {
             }
         });
 
-     /*   if (BuildConfig.FLAVOR.equals("free")) {
+       if (BuildConfig.FLAVOR.equals("free")) {
 
             com.udacity.gradle.builditbigger.free.MainActivityFragment freeFragment = new com.udacity.gradle.builditbigger.free.MainActivityFragment();
             FragmentManager fragmentManager = getFragmentManager();
@@ -51,7 +51,7 @@ public class MainActivityFragment extends Fragment {
 
             btn_joke.setVisibility(View.GONE);
             tv_des.setVisibility(View.GONE);
-        }*/
+        }
 
         return root;
     }
