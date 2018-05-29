@@ -3,7 +3,6 @@ package com.udacity.gradle.builditbigger;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.util.Pair;
 import android.widget.Toast;
 
 import com.example.jokesandroidlib.JokesActivity;
@@ -21,7 +20,7 @@ public  class EndpointsAsyncTask extends AsyncTask<Void, Void, String> {
     private static MyApi myApiService = null;
     private Context context;
 
-    public EndpointsAsyncTask(MainActivity mainActivity) {
+    public EndpointsAsyncTask(Context mainActivity) {
         context = mainActivity;
     }
 
