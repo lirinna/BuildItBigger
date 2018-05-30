@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         if (BuildConfig.FLAVOR.equals("free")) {
-            setTitle("Free Version");
+            setTitle(getString(R.string.free));
 
         } else {
-            setTitle("Paid Version");
+            setTitle(getString(R.string.paid));
         }
     }
 
