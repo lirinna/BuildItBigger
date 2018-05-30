@@ -16,13 +16,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        if (BuildConfig.FLAVOR.equals("free")) {
-            setTitle(getString(R.string.free));
-
-        } else {
-            setTitle(getString(R.string.paid));
-        }
     }
 
     @Override
